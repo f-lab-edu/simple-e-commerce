@@ -6,11 +6,11 @@ import { numberWithCommas } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
-interface Props {
+interface ProductItemProps {
   item: Product;
 }
 
-export default function ProductItem({ item }: Props) {
+export default function ProductItem({ item }: ProductItemProps) {
   return (
     <Card className="border-0">
       <CardContent className="w-auto flex flex-col p-2.5 space-y-2">
