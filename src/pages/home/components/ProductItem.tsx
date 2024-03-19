@@ -18,6 +18,7 @@ export default function ProductItem({ item }: Props) {
           <img
             className="max-w-full min-h-full rounded-md object-cover transition-all hover:scale-105"
             src={item.thumbnail}
+            alt={`${item.productName}`}
           />
         </div>
         <div className="space-y-2">
