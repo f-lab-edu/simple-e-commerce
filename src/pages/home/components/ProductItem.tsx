@@ -5,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { AddCartButton } from '@/pages/home/components/AddCartButton';
 
 interface ProductItemProps {
-  item: Product;
+  readonly item: Product;
 }
 
 export function ProductItem({ item }: ProductItemProps) {

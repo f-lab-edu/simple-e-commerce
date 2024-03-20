@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button';
 import { ToastAction } from '@/components/ui/toast';
 
 interface AddCartButtonProps {
-  item: Product;
+  readonly item: Product;
 }
 
 export function AddCartButton({ item }: AddCartButtonProps) {
