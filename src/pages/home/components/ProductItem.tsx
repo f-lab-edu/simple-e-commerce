@@ -1,10 +1,8 @@
-import { ShoppingBagIcon } from 'lucide-react';
-
 import type { Product } from '@/pages/home/types';
 import { numberWithCommas } from '@/lib/utils';
 
 import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { AddCartButton } from '@/pages/home/components/AddCartButton';
 
 interface ProductItemProps {
   item: Product;
@@ -34,9 +32,7 @@ export function ProductItem({ item }: ProductItemProps) {
           <p className="truncate text-sm font-semibold">{item.productName}</p>
           <p className="text-xs">{item.brandName}</p>
           <div className="flex justify-end items-center">
-            <Button className="border-0 hover:text-primary hover:bg-background" variant="outline">
-              <ShoppingBagIcon />
-            </Button>
+            <AddCartButton item={item} />
           </div>
         </div>
       </CardContent>
