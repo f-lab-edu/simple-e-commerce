@@ -25,11 +25,9 @@ export function ProductList() {
     <>
       {products.length > 0 ? (
         <ul className="grid grid-cols-3 gap-4">
-          <>
-            {products.map((item) => (
-              <ProductItem key={item.id} item={item} />
-            ))}
-          </>
+          {products.map((item) => (
+            <ProductItem key={item.id} item={item} />
+          ))}
         </ul>
       ) : (
         <div className="pt-60">
