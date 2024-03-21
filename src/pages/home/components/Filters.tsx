@@ -1,25 +1,32 @@
-import { Category } from '../types';
+import type { Category } from '@/pages/home/types';
+import { useProductStore } from '@/store/useProductStore';
 
 import { Button } from '@/components/ui/button';
 
-const CATEGORYS: Category[] = [
-  { value: 'outer', label: '아우터' },
-  { value: 'top', label: '상의' },
-  { value: 'pants', label: '팬츠' },
-  { value: 'onepiece', label: '원피스' },
-  { value: 'skirt', label: '스커트' },
-  { value: 'underwear', label: '언더웨어' },
-];
-
 export function Filters() {
+  const categorysData = useProductStore((state) => state.categorysData);
+  const currentCategory = useProductStore((state) => state.currentCategory);
+  const setCategory = useProductStore((state) => state.setCategory);
+
+  const handleCategoryClick = (category: Category | null) => setCategory(category);
+
   return (
     <div className="grid grid-cols-8 gap-4">
-      <Button>모든 상품</Button>
-      {CATEGORYS.map((category) => (
-        <Button key={category.value} variant="outline">
-          {category.label}
-        </Button>
-      ))}
+      <Button variant={!currentCategory ? 'default' : 'outline'} onClick={() => handleCategoryClick(null)}>
+        모든 상품
+      </Button>
+      {categorysData.map((category) => {
+        const selected = currentCategory?.value === category.value;
+        return (
+          <Button
+            key={category.value}
+            variant={selected ? 'default' : 'outline'}
+            onClick={() => handleCategoryClick(category)}
+          >
+            {category.label}
+          </Button>
+        );
+      })}
     </div>
   );
 }
