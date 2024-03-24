@@ -9,11 +9,13 @@ interface State {
   filteredProducts: Product[];
   categorysData: Category[];
   currentCategory: Category | null;
+  searchKeyword: string;
 }
 
 interface Actions {
   setCategory: (category: Category | null) => void;
   setFilteredProducts: (list: Product[]) => void;
+  setKeyword: (keyword: string) => void;
 }
 
 export const useProductStore = create<State & Actions>()((set) => ({
@@ -21,6 +23,8 @@ export const useProductStore = create<State & Actions>()((set) => ({
   filteredProducts: [],
   categorysData: categorysData as Category[],
   currentCategory: null,
+  searchKeyword: '',
   setCategory: (category) => set(() => ({ currentCategory: category })),
   setFilteredProducts: (list) => set(() => ({ filteredProducts: list })),
+  setKeyword: (keyword) => set(() => ({ searchKeyword: keyword })),
 }));
