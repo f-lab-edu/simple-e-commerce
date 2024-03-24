@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search as SearchIcon } from 'lucide-react';
+import { Search as SearchIcon, X as XIcon } from 'lucide-react';
 
 import { useProductStore } from '@/store/useProductStore';
 
@@ -27,6 +27,11 @@ export function Searchbox() {
           }
         }}
       />
+      {inputValue && (
+        <button className="absolute top-2 right-2" onClick={() => handleInputChange('')}>
+          <XIcon />
+        </button>
+      )}
     </div>
   );
 }
