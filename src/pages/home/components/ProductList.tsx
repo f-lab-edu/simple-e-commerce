@@ -6,20 +6,28 @@ import { useProductStore } from '@/store/useProductStore';
 import ProductItem from './ProductItem';
 
 export function ProductList() {
-  const { productsData, currentCategory, filteredProducts, setFilteredProducts } = useProductStore();
-  const products = currentCategory ? filteredProducts : productsData;
+  const { productsData, currentCategory, filteredProducts, searchKeyword, setFilteredProducts } = useProductStore();
+  const products = currentCategory || searchKeyword ? filteredProducts : productsData;
 
-  const getFilteredList = (products: Product[], category: Category) => {
-    const filteredList = products.filter((product) => product.type === category.value);
+  const getFilteredList = (products: Product[], filters: { category: Category | null; keyword: string }) => {
+    let filteredList = products;
+
+    if (filters.category) {
+      filteredList = filteredList.filter((product) => product.type === filters.category?.value);
+    }
+
+    if (filters.keyword) {
+      filteredList = filteredList.filter((product) => product.productName.includes(filters.keyword));
+    }
+
     return filteredList;
   };
 
   useEffect(() => {
-    if (currentCategory) {
-      const filteredList = getFilteredList(productsData, currentCategory);
-      setFilteredProducts(filteredList);
-    }
-  }, [productsData, currentCategory, setFilteredProducts]);
+    if (!currentCategory && !searchKeyword) return;
+    const filteredList = getFilteredList(productsData, { category: currentCategory, keyword: searchKeyword });
+    setFilteredProducts(filteredList);
+  }, [productsData, currentCategory, searchKeyword, setFilteredProducts]);
 
   return (
     <>
