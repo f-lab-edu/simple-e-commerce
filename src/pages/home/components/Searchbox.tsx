@@ -19,6 +19,8 @@ export function Searchbox() {
       <Input
         className="pl-10 bg-[#f2f2f2]"
         placeholder="원하는 상품을 검색하세요"
+        autoComplete="off"
+        autoCorrect="off"
         value={inputValue}
         onChange={(e) => handleInputChange(e.target.value)}
         onKeyUp={(e) => {
