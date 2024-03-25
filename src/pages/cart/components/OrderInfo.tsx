@@ -11,7 +11,7 @@ export function OrderInfo() {
           </p>
         </div>
         <div className="flex-1">
-          <Button className="w-full" variant="secondary" size="sm">
+          <Button type="submit" className="w-full" variant="secondary" size="sm">
             주문하기
           </Button>
         </div>
