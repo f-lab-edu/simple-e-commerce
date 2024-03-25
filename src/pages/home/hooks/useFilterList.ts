@@ -19,7 +19,9 @@ export function useFilterList(
       }
 
       if (filters.keyword) {
-        filteredList = filteredList.filter((product) => product.productName.includes(filters.keyword));
+        filteredList = filteredList.filter((product) =>
+          product.productName.toLowerCase().includes(filters.keyword.toLowerCase()),
+        );
       }
 
       return filteredList;
