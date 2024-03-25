@@ -1,0 +1,8 @@
+[
+  { "value": "outer", "label": "아우터" },
+  { "value": "top", "label": "상의" },
+  { "value": "pants", "label": "팬츠" },
+  { "value": "onepiece", "label": "원피스" },
+  { "value": "skirt", "label": "스커트" },
+  { "value": "underwear", "label": "언더웨어" }
+]
