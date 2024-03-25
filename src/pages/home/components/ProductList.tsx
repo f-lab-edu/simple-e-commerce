@@ -1,7 +1,7 @@
 import { useProductStore } from '@/store/useProductStore';
 import { useFilterList } from '@/pages/home/hooks/useFilterList';
 
-import ProductItem from './ProductItem';
+import { ProductItem } from './ProductItem';
 
 export function ProductList() {
   const { productsData, currentCategory, filteredProducts, searchKeyword, setFilteredProducts } = useProductStore();
