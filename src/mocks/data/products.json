@@ -1,0 +1,112 @@
+[
+  {
+    "id": 0,
+    "type": "top",
+    "thumbnail": "https://m.plac-official.com/web/product/extra/small/202311/a3b1323b936a4e97686e77338c250ab9.jpg",
+    "productName": "플랙 로고 그래픽 맨투맨",
+    "brandName": "플랙",
+    "price": 50000,
+    "discount": 10,
+    "discountedPrice": 45000
+  },
+  {
+    "id": 1,
+    "type": "pants",
+    "thumbnail": "https://image.sivillage.com/upload/C00001/goods/org/839/230711005674839.jpg?RS=750&SP=1",
+    "productName": "ADIDAS(아디다스) 아디다스 트레이닝팬츠 브랜드러브 7/8 우븐 팬츠",
+    "brandName": "아디다스",
+    "price": 39900,
+    "discount": 0,
+    "discountedPrice": 39900
+  },
+  {
+    "id": 2,
+    "type": "top",
+    "thumbnail": "https://m.dayout.store/web/product/big/202311/8ecd6f6cda99950fbf4493cf5d7dc7f0.jpg",
+    "productName": "나이키 AS 남성용 드라이핏 레전드 반팔 티셔츠",
+    "brandName": "나이키",
+    "price": 20000,
+    "discount": 10,
+    "discountedPrice": 18000
+  },
+  {
+    "id": 3,
+    "type": "pants",
+    "thumbnail": "https://d2gfz7wkiigkmv.cloudfront.net/pickin/2/1/2/AuPm8K9FSEWweLRKtwCd1w",
+    "productName": "플랙 플랙 데님 베이직 팬츠",
+    "brandName": "플랙",
+    "price": 78000,
+    "discount": 15,
+    "discountedPrice": 6630
+  },
+  {
+    "id": 4,
+    "type": "outer",
+    "thumbnail": "https://image.msscdn.net/images/goods_img/20200806/1539044/1539044_1_500.jpg",
+    "productName": "나이키(NIKE) NSW 스우스 윈드러너 자켓",
+    "brandName": "나이키",
+    "price": 120000,
+    "discount": 20,
+    "discountedPrice": 96000
+  },
+  {
+    "id": 5,
+    "type": "skirt",
+    "thumbnail": "https://m.vinclo.co.kr/web/product/big/2022/12/02/HWA0494%20(1).GIF",
+    "productName": "노브랜드 스커트",
+    "brandName": "빈클로",
+    "price": 24000,
+    "discount": 5,
+    "discountedPrice": 22800
+  },
+  {
+    "id": 6,
+    "type": "outer",
+    "thumbnail": "https://media.bunjang.co.kr/product/245043116_%7Bcnt%7D_1709369716_w%7Bres%7D.jpg",
+    "productName": "K2 케이투 씬에어 리버시블 패딩",
+    "brandName": "K2",
+    "price": 150000,
+    "discount": 0,
+    "discountedPrice": 150000
+  },
+  {
+    "id": 7,
+    "type": "outer",
+    "thumbnail": "https://image.msscdn.net/images/goods_img/20220816/2718048/2718048_16762622591429_500.jpg",
+    "productName": "노스페이스(THE NORTH FACE) NJ3BN51J 화이트라벨 닐턴 자켓",
+    "brandName": "노스페이스",
+    "price": 131000,
+    "discount": 10,
+    "discountedPrice": 117900
+  },
+  {
+    "id": 8,
+    "type": "pants",
+    "thumbnail": "https://img016.feelway.com/upfile021/GOODS/6610336987/7950580016741159449955b3a80d9131953ed4c9d08bff9bed.jpeg",
+    "productName": "디키즈 레귤러핏 스케이트보드 트윌 팬츠 바지",
+    "brandName": "디키즈",
+    "price": 65000,
+    "discount": 0,
+    "discountedPrice": 65000
+  },
+  {
+    "id": 9,
+    "type": "top",
+    "thumbnail": "https://img016.feelway.com/3338/bd55pd3338204440ed1.jpg",
+    "productName": "Balenciaga 티셔츠 발렌시아가 BB 블랙 반팔티",
+    "brandName": "발렌시아가",
+    "price": 360000,
+    "discount": 10,
+    "discountedPrice": 288000
+  },
+  {
+    "id": 10,
+    "type": "top",
+    "thumbnail": "https://img016.feelway.com/3356/bd55pd3356662603ed1.jpg",
+    "productName": "18SS 발렌시아가 블랙 웨이브 로고 오버핏 후드티",
+    "brandName": "발렌시아가",
+    "price": 500000,
+    "discount": 8,
+    "discountedPrice": 460000
+  }
+]
