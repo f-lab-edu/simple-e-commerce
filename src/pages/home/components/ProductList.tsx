@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import { Product, Category } from '@/pages/home/types';
+import type { Product, Category } from '@/pages/home/types';
 import { useProductStore } from '@/store/useProductStore';
 
 import ProductItem from './ProductItem';
