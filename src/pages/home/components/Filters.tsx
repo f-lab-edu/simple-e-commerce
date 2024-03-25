@@ -12,7 +12,7 @@ export function Filters() {
 
   return (
     <div className="grid grid-cols-8 gap-4">
-      <Button variant={!currentCategory ? 'default' : 'outline'} onClick={() => handleCategoryClick(null)}>
+      <Button variant={currentCategory ? 'outline' : 'default'} onClick={() => handleCategoryClick(null)}>
         모든 상품
       </Button>
       {categorysData.map((category) => {
