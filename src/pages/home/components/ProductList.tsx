@@ -1,3 +1,5 @@
+import { useDeferredValue } from 'react';
+
 import { useProductStore } from '@/store/useProductStore';
 import { useFilterList } from '@/pages/home/hooks/useFilterList';
 
@@ -5,9 +7,11 @@ import { ProductItem } from './ProductItem';
 
 export function ProductList() {
   const { productsData, currentCategory, filteredProducts, searchKeyword, setFilteredProducts } = useProductStore();
-  const products = currentCategory || searchKeyword ? filteredProducts : productsData;
+  const deferredSearchKeyword = useDeferredValue(searchKeyword);
 
-  useFilterList(productsData, currentCategory, searchKeyword, setFilteredProducts);
+  const products = currentCategory || deferredSearchKeyword ? filteredProducts : productsData;
+
+  useFilterList(productsData, currentCategory, deferredSearchKeyword, setFilteredProducts);
 
   return (
     <>
