@@ -15,10 +15,11 @@ interface AddCartButtonProps {
 
 export function AddCartButton({ item }: AddCartButtonProps) {
   const navigate = useNavigate();
-  const addToCart = useCartStore((state) => state.addToCart);
+  const { cartList, addToCart, addQuantity } = useCartStore();
 
   const handleButtonClick = () => {
-    addToCart(item);
+    const isAddeditem = cartList.findIndex((cartItem) => cartItem.id === item.id) > -1;
+    isAddeditem ? addQuantity(item.id) : addToCart(item);
     toast({
       title: '장바구니에 상품이 담겼습니다',
       action: (
