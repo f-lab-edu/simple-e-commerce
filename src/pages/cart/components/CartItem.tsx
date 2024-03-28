@@ -13,12 +13,12 @@ export function CartItem() {
           <XIcon className="text-muted" />
         </Button>
       </div>
-      <div className="flex items-center space-x-8">
+      <div className="flex flex-col space-y-5 sm:flex-row sm:space-x-8">
         <div className="flex-1 flex items-center space-x-5">
-          <div className="w-32 h-32">
+          <div className="flex-1 sm:flex-none sm:w-32 sm:h-32">
             <img className="w-full h-full rounded-lg" src="images/product1.png" />
           </div>
-          <div className="space-y-1">
+          <div className="flex-1 sm:flex-none space-y-1">
             <h3 className="text-sm font-medium">나이키 바람막이</h3>
             <p className="text-sm">나이키</p>
             <div className="flex items-center space-x-2">
@@ -27,11 +27,13 @@ export function CartItem() {
             </div>
           </div>
         </div>
-        <div className="w-24">
-          <Input className="text-center" type="number" value={1} />
-        </div>
-        <div className="w-40">
-          <p className="font-medium">50,000원</p>
+        <div className="flex items-center space-x-5">
+          <div className="flex-1 sm:flex-none sm:w-24">
+            <Input className="text-center" type="number" value={1} />
+          </div>
+          <div className="flex-1 sm:flex-none sm:w-40">
+            <p className="text-center text-lg font-medium">50,000원</p>
+          </div>
         </div>
       </div>
     </li>
