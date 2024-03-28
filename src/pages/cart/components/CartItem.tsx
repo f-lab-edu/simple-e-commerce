@@ -10,9 +10,10 @@ import { Checkbox } from '@/components/ui/checkbox';
 interface CartItemProps {
   readonly item: CartProduct;
   readonly toggleCheck: (id: number) => void;
+  readonly updateQuantity: (id: number, value: number) => void;
 }
 
-export function CartItem({ item, toggleCheck }: CartItemProps) {
+export function CartItem({ item, toggleCheck, updateQuantity }: CartItemProps) {
   return (
     <li className="flex flex-col px-5 py-2.5 space-y-4 bg-background rounded-md">
       <div className="flex">
@@ -41,7 +42,13 @@ export function CartItem({ item, toggleCheck }: CartItemProps) {
         </div>
         <div className="flex items-center space-x-5">
           <div className="flex-1 sm:flex-none sm:w-24">
-            <Input className="text-center" type="number" value={item.quantity} onChange={() => null} />
+            <Input
+              className="text-center"
+              type="number"
+              min={1}
+              value={item.quantity}
+              onChange={(e) => updateQuantity(item.id, Number(e.target.value))}
+            />
           </div>
           <div className="flex-1 sm:flex-none sm:w-40">
             <p className="text-center text-lg font-medium">{`${numberWithCommas(item.discountedPrice * item.quantity)}원`}</p>
