@@ -13,6 +13,7 @@ interface Actions {
   updateQuantity: (id: number, value: number) => void;
   toggleCheck: (id: number) => void;
   toggleAllCheck: (checked: boolean) => void;
+  removeProduct: (id: number) => void;
 }
 
 export const useCartStore = create<State & Actions>()((set) => ({
@@ -31,4 +32,5 @@ export const useCartStore = create<State & Actions>()((set) => ({
       cartList: state.cartList.map((item) => (item.id === id ? { ...item, checked: !item.checked } : item)),
     })),
   toggleAllCheck: (checked) => set((state) => ({ cartList: state.cartList.map((item) => ({ ...item, checked })) })),
+  removeProduct: (id) => set((state) => ({ cartList: state.cartList.filter((item) => item.id !== id) })),
 }));
