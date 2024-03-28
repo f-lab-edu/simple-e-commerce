@@ -29,7 +29,7 @@ export function CartItem({ item, toggleCheck, updateQuantity }: CartItemProps) {
       <div className="flex flex-col space-y-5 sm:flex-row sm:space-x-8">
         <div className="flex-1 flex items-center space-x-5">
           <div className="flex-1 sm:flex-none sm:w-32 sm:h-32">
-            <img className="w-full h-full rounded-lg" src={item.thumbnail} />
+            <img className="w-full h-full rounded-lg" src={item.thumbnail} alt="상품 이미지" />
           </div>
           <div className="flex-1 sm:flex-none space-y-1">
             <h3 className="text-wrap text-sm font-medium">{item.productName}</h3>
