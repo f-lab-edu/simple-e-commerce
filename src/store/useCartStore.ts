@@ -11,6 +11,7 @@ interface Actions {
   addToCart: (item: Product) => void;
   addQuantity: (id: number) => void;
   toggleCheck: (id: number) => void;
+  toggleAllCheck: (checked: boolean) => void;
 }
 
 export const useCartStore = create<State & Actions>()((set) => ({
@@ -24,4 +25,5 @@ export const useCartStore = create<State & Actions>()((set) => ({
     set((state) => ({
       cartList: state.cartList.map((item) => (item.id === id ? { ...item, checked: !item.checked } : item)),
     })),
+  toggleAllCheck: (checked) => set((state) => ({ cartList: state.cartList.map((item) => ({ ...item, checked })) })),
 }));
