@@ -18,8 +18,8 @@ export function Filters() {
       <Popover>
         <div className="flex justify-end items-center space-x-2 sm:hidden">
           <Button className="min-w-min">{currentCategory ? currentCategory.label : '모든상품'}</Button>
-          <PopoverTrigger>
-            <Button variant="outline" className="bg-white text-foreground hover:bg-white ">
+          <PopoverTrigger asChild>
+            <Button asChild variant="outline" className="bg-white text-foreground hover:bg-white ">
               <ChevronDown />
             </Button>
           </PopoverTrigger>
